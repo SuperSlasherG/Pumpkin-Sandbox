@@ -11,10 +11,13 @@
             margin: 0;
             padding: 0;
             height: 200vh;
+            background: linear-gradient(to bottom, #001f3f, #007bff);
+            color: white;
         }
         .hidden-content {
             opacity: 0;
-            transition: opacity 1s ease;
+            transition: opacity 1s ease, filter 1s ease;
+            filter: blur(5px);
             position: relative;
             top: 100vh;
             display: flex;
@@ -23,6 +26,7 @@
         }
         .visible {
             opacity: 1;
+            filter: blur(0);
         }
         .content {
             padding: 20px;
@@ -33,6 +37,19 @@
         img {
             max-width: 300px;
             height: auto;
+        }
+        .download-button {
+            background-color: #00aaff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -45,10 +62,10 @@
     <div class="hidden-content" id="hiddenContent">
         <div class="content">
             <h2>Download Section</h2>
-            <a href="PumpkinSandbox.zip" download>Download File</a>
+            <a href="https://download1652.mediafire.com/73j5ro79yjdg7HLVLPusZ8G8RjagAmEy5I--Rn9Aobo5d7L_PGLHuCYnDtIcKkIx5H8W_wqvDY3fr1_izmjFsLfL2qi-MWL6mnd2B94Rfn6a7DTb0MXEU-7m7vqFORbO_s2aTls3ppPhc-U-BgdvwqQdryZFvMDskMgsHv6ANnlG/mwy52cwd356xk0y/pumpkin+sandbox+v0.43.apk" class="download-button" download>Download File</a>
         </div>
         <div class="image">
-            <img src="VmHMg6.png" alt="Descriptive Alt Text">
+            <img src="path/to/your/image.jpg" alt="Descriptive Alt Text">
         </div>
     </div>
 
