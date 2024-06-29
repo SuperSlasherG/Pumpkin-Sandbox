@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A simple website with a download link and scrolling effect.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+        }
+        .hidden-content {
+            opacity: 0;
+            transition: opacity 1s ease;
+            position: relative;
+            top: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .visible {
+            opacity: 1;
+        }
+        .content {
+            padding: 20px;
+        }
+        .image {
+            padding: 20px;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to the Download Page</h1>
+        <p>Scroll down to see the hidden content.</p>
+    </div>
+    
+    <div class="hidden-content" id="hiddenContent">
+        <div class="content">
+            <h2>Download Section</h2>
+            <a href="path/to/your/file.zip" download>Download File</a>
+        </div>
+        <div class="image">
+            <img src="path/to/your/image.jpg" alt="Descriptive Alt Text">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const hiddenContent = document.getElementById('hiddenContent');
+            const scrollPosition = window.scrollY + window.innerHeight;
+            
+            if (scrollPosition > hiddenContent.offsetTop) {
+                hiddenContent.classList.add('visible');
+            }
+        });
+    </script>
+</body>
+</html>
