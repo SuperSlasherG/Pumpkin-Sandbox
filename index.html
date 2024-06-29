@@ -13,20 +13,23 @@
             height: 200vh;
             background: linear-gradient(to bottom, #001f3f, #007bff);
             color: white;
+            overflow-x: hidden;
         }
         .hidden-content {
             opacity: 0;
-            transition: opacity 1s ease, filter 1s ease;
-            filter: blur(5px);
+            transition: opacity 1s ease, filter 1s ease, transform 1s ease;
+            filter: blur(10px);
             position: relative;
             top: 100vh;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            transform: translateY(50px);
         }
         .visible {
             opacity: 1;
             filter: blur(0);
+            transform: translateY(0);
         }
         .content {
             padding: 20px;
