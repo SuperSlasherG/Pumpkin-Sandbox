@@ -17,21 +17,25 @@
             color: white;
             overflow-x: hidden;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .content-container {
             max-width: 1000px; /* Adjust max-width as needed */
             width: 90%;
             padding: 20px;
             animation: fadeIn 1s ease;
+            text-align: center;
         }
         .hidden-content {
             opacity: 0;
             transition: opacity 1s ease, filter 1s ease, transform 1s ease, background 1s ease;
             filter: blur(10px);
-            position: relative;
-            top: 100vh;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -45,7 +49,6 @@
             transform: translateY(0);
         }
         .content {
-            text-align: center;
             animation: fadeInUp 1s forwards;
             flex: 1;
             padding: 20px;
