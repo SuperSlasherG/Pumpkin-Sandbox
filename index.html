@@ -21,9 +21,8 @@
             align-items: center;
         }
         .content-container {
-            max-width: 800px; /* Adjust max-width as needed */
+            max-width: 1000px; /* Adjust max-width as needed */
             width: 90%;
-            text-align: center;
             padding: 20px;
             animation: fadeIn 1s ease;
         }
@@ -37,42 +36,42 @@
             align-items: center;
             justify-content: space-between;
             transform: translateY(50px);
-            width: 80%; /* Adjust the width as needed */
-            margin-left: -40%; /* Adjust to extend to the left */
-            padding: 40px; /* Add padding for spacing */
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
         }
         .visible {
             opacity: 1;
             filter: blur(0);
             transform: translateY(0);
-            background: rgba(255, 255, 255, 0.1);
         }
         .content {
-            padding: 20px;
+            text-align: center;
             animation: fadeInUp 1s forwards;
+            flex: 1;
+            padding: 20px;
         }
         .image {
-            padding: 20px;
             animation: fadeInUp 1.5s forwards;
-            display: flex;
-            align-items: center;
+            flex: 1;
+            padding: 20px;
         }
         .image img {
-            max-width: 300px;
+            max-width: 100%;
             height: auto;
             transition: transform 0.5s ease;
         }
         .text-container {
-            max-width: 300px;
-            margin-right: 20px;
-            text-align: right;
+            flex: 2;
+            padding: 20px;
+            text-align: left;
         }
         .text-container p {
             margin-bottom: 15px;
         }
         .download-container {
-            display: flex;
-            align-items: center;
+            flex: 1;
+            padding: 20px;
+            text-align: center;
         }
         .download-button {
             background-color: #00aaff;
@@ -88,9 +87,6 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
             background-color: #0099cc;
-        }
-        .image:hover img {
-            transform: scale(1.1);
         }
         @keyframes fadeIn {
             from {
@@ -132,17 +128,13 @@
         <div class="image">
             <img src="VmHMg6.png" alt="Pumpkin Sandbox">
         </div>
-        <div class="content-container">
-            <div class="download-container">
-                <div class="text-container">
-                    <p>Pumpkin Sandbox is a game made by Xoyt Gamer and is fun to play with. We have events and competitions, including the current event "Play with the Owner", featuring Xoyt Gamer himself. Join and download our game.</p>
-                    <a href="https://discord.gg/ErNs9bn2Sk" target="_blank">Join our Discord</a>
-                </div>
-                <div class="content">
-                    <h2>Download Pumpkin Sandbox</h2>
-                    <a href="https://download1652.mediafire.com/73j5ro79yjdg7HLVLPusZ8G8RjagAmEy5I--Rn9Aobo5d7L_PGLHuCYnDtIcKkIx5H8W_wqvDY3fr1_izmjFsLfL2qi-MWL6mnd2B94Rfn6a7DTb0MXEU-7m7vqFORbO_s2aTls3ppPhc-U-BgdvwqQdryZFvMDskMgsHv6ANnlG/mwy52cwd356xk0y/pumpkin+sandbox+v0.43.apk" class="download-button" download>Download File</a>
-                </div>
-            </div>
+        <div class="text-container">
+            <p>Pumpkin Sandbox is a game made by Xoyt Gamer and is fun to play with. We have events and competitions, including the current event "Play with the Owner", featuring Xoyt Gamer himself. Join and download our game.</p>
+            <a href="https://discord.gg/ErNs9bn2Sk" target="_blank">Join our Discord</a>
+        </div>
+        <div class="download-container">
+            <h2>Download Pumpkin Sandbox</h2>
+            <a href="https://download1652.mediafire.com/73j5ro79yjdg7HLVLPusZ8G8RjagAmEy5I--Rn9Aobo5d7L_PGLHuCYnDtIcKkIx5H8W_wqvDY3fr1_izmjFsLfL2qi-MWL6mnd2B94Rfn6a7DTb0MXEU-7m7vqFORbO_s2aTls3ppPhc-U-BgdvwqQdryZFvMDskMgsHv6ANnlG/mwy52cwd356xk0y/pumpkin+sandbox+v0.43.apk" class="download-button" download>Download File</a>
         </div>
     </div>
 
